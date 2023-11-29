@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { SleepData } from '../data/sleep-data';
 import { OvernightSleepData } from '../data/overnight-sleep-data';
 import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
-import { SleepinessLogPage } from '../sleepiness-log/sleepiness-log.page';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +38,10 @@ export class SleepService {
 	public logSleepinessData(sleepData:StanfordSleepinessData) {
 		SleepService.AllSleepData.push(sleepData);
 		SleepService.AllSleepinessData.push(sleepData);
+	}
+
+	public deleteSleepinessData(sleepData:StanfordSleepinessData) {
+		SleepService.AllSleepData.splice(SleepService.AllSleepData.indexOf(sleepData), 1);
+		SleepService.AllSleepinessData.splice(SleepService.AllSleepinessData.indexOf(sleepData), 1);
 	}
 }

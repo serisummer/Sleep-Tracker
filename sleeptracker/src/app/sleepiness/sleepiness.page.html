@@ -7,5 +7,35 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-text-center">
+  <ion-list>
+    <ion-label>Today, I am ...</ion-label>
+    <ion-radio-group [(ngModel)]="value">
+      <ion-item>
+        <ion-radio value="1"><article class="wrapped-text">1 - Feeling active, vital, alert, or wide awake</article></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="2"><article class="wrapped-text">2 - Functioning at high levels, but not at peak; able to concentrate</article></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="3"><article class="wrapped-text">3 - Awake, but relaxed; responsive but not fully alert</article></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="4"><article class="wrapped-text">4 - Somewhat foggy, let down</article></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="5"><article class="wrapped-text">5 - Foggy; losing interest in remaining awake; slowed down</article></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="6"><article class="wrapped-text">6 - Sleepy, woozy, fighting sleep; prefer to lie down</article></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="7"><article class="wrapped-text">7 - No longer fighting sleep, sleep onset soon; having dream-like thoughts</article></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>  
+
+  <div class="ion-align-items-center">
+    <ion-button (click)="addEntry(value)">Log</ion-button>
+  </div>
 </ion-content>

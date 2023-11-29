@@ -23,11 +23,6 @@ export class OvernightSleepPage implements OnInit {
 	ngOnInit() {
 	}
 
-	handleDateSelection(event: CustomEvent<IonDatetime>) {
-		// event.detail.value contains the selected date and time
-		console.log(event.detail.value);
-	  }
-
 	async addEntry(start: string, end: string) {
 		console.log(start);
 		console.log(end);
@@ -49,7 +44,5 @@ export class OvernightSleepPage implements OnInit {
 		
 		  await toast.present();
 	}
-
-	
 
 }
