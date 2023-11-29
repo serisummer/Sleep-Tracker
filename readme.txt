@@ -75,3 +75,5 @@ support it this way because it is simple and straightforward.
 Buttons for logging are at the top of home page. After entering the logging page, user can use the back button that is located
 at the top left of the page. The close proximity of navigation buttons allows users to navigate through different pages without
 having to move their fingers a lot, which makes the user interaction more smooth.
+Users are also given the chance to confirm or cancel a log or delete, preventing users from accidentally doing things they
+don't intend to do.
