@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Overnight Sleep Log</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item-sliding *ngFor="let entry of allOvernightSleepData">
+      <ion-item>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ entry.dateString() }}</ion-card-title>
+            <ion-card-subtitle>{{ entry.summaryString() }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteEntry(entry)">Delete</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

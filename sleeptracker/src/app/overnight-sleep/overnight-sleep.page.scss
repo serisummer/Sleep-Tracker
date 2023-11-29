@@ -1,0 +1,19 @@
+ion-button {
+  font-size: 3vw;
+}
+
+ion-title {
+  font-size: 7vw;
+}
+
+ion-label {
+  padding: 1vw;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

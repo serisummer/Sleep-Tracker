@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log Overnight Sleep</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+  <div class="centered-container">
+    <ion-label>START</ion-label>
+    <ion-item class="ion-align-items-center">
+      <ion-datetime placeholder="Select Start DateTime" [(ngModel)]="startDateTime"></ion-datetime>
+    </ion-item>
+  </div>
+
+  <div class="centered-container">
+    <ion-label>END</ion-label>
+    <ion-item class="ion-align-items-center">
+      <ion-datetime placeholder="Select End DateTime" [(ngModel)]="endDateTime"></ion-datetime>
+    </ion-item>
+  </div>
+
+  <div class="ion-align-items-center">
+    <ion-button (click)="addEntry(startDateTime, endDateTime)">Log Sleepiness</ion-button>
+  </div>
+</ion-content>
